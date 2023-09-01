@@ -72,28 +72,12 @@ return [
     //      ],
     //  ]
     //
+    //
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
-                App\GraphQL\Queries\PostsQuery::class
+                'post' => \App\GraphQL\Queries\PostQuery::class,
             ],
-            'mutation' => [
-                // ExampleMutation::class,
-            ],
-            // The types only available in this schema
-            'types' => [
-                // ExampleType::class,
-            ],
-
-            // Laravel HTTP middleware
-            'middleware' => null,
-
-            // Which HTTP methods to support; must be given in UPPERCASE!
-            'method' => ['GET', 'POST'],
-
-            // An array of middlewares, overrides the global ones
-            'execution_middleware' => null,
         ],
     ],
 

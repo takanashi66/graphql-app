@@ -14,7 +14,5 @@ use App\Http\Controllers\Postscontroller;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', [Postscontroller::class, 'index'])->name('index');
 Route::post('/store', [Postscontroller::class, 'store'])->name('store');

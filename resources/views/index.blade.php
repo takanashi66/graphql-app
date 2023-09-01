@@ -31,6 +31,28 @@
         <input type="submit" value="登録">
     </form>
 
+    <h2>登録されたデータ</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>タイトル</th>
+                <th>サブタイトル</th>
+                <th>本文</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($posts as $post)
+                <tr>
+                    <td>{{ $post->id }}</td>
+                    <td>{{ $post->title }}</td>
+                    <td>{{ $post->subtitle }}</td>
+                    <td>{{ $post->body }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
     <style>
         h1{
             text-align: center;
@@ -56,6 +78,24 @@
         .err{
             color: #f00;
             margin-top: 10px;
+        }
+
+
+        h2{
+            margin: 60px 0 0;
+            text-align: center;
+        }
+        table{
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto 0;
+            border-collapse: collapse;
+        }
+
+        th,
+        td{
+            border: solid 1px #ccc;
+            padding: .8em;
         }
     </style>
 </body>
