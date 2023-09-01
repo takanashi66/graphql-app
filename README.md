@@ -13,3 +13,9 @@ sail artisan vendor:publish --provider="Rebing\GraphQL\GraphQLServiceProvider"
 ```
 composer require mll-lab/laravel-graphql-playground
 ```
+
+これでデータを返して欲しい？
+
+```
+http://localhost:8888/graphql?query=query+Fetchposts{posts{id,title}}
+```

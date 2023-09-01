@@ -48,13 +48,13 @@ class PostsQuery extends Query
         //     'The posts works',
         // ];
         if (isset($args['id'])) {
-            return User::where('id' , $args['id'])->get();
+            return Posts::where('id' , $args['id'])->get();
         }
 
         if (isset($args['title'])) {
-            return User::where('title', $args['title'])->get();
+            return Posts::where('title', $args['title'])->get();
         }
 
-        return User::all();
+        return Posts::all();
     }
 }
