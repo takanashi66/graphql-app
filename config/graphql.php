@@ -91,6 +91,7 @@ return [
     // ]
     //
     'types' => [
+        App\GraphQL\Types\PostType::class
         // ExampleType::class,
         // ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
